@@ -82,6 +82,7 @@ class WarpEnv:
         self.goal = wp.array(goal, dtype=wp.uint64, device=self.dev)
         self.reward = wp.zeros(E, dtype=wp.float32, device=self.dev)
         self.done = wp.zeros(E, dtype=wp.bool, device=self.dev)
+        self.act = None                                # re-sized lazily for this E
 
     def mask(self):
         out = wp.zeros((self.state.shape[0], self.A), dtype=wp.bool, device=self.dev)

@@ -11,4 +11,5 @@ dependencies = [
 ]
 
 [tool.setuptools]
+package-dir = {"" = "bench/blocksworld"}
 py-modules = ["ground", "ref_numpy", "env_jax", "env_warp", "bench"]
