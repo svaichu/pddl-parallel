@@ -1,0 +1,14 @@
+[project]
+name = "blocksworld-bench"
+version = "0.1.0"
+description = "Blocksworld env benchmark: JAX vs NVIDIA Warp"
+requires-python = ">=3.10"
+dependencies = [
+    "jax==0.12.1",
+    "jaxlib==0.12.1",
+    "warp-lang==1.19.0",
+    "numpy",
+]
+
+[tool.setuptools]
+py-modules = ["ground", "ref_numpy", "env_jax", "env_warp", "bench"]
