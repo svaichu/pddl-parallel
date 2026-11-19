@@ -53,10 +53,16 @@ def _random_state(N, rng, W):
     return _mask(bits, W), _mask(onb, W)
 
 def make_pool(N, K=4096, seed=0):
-    """Returns pool_state[K,W], pool_goal[K,W] (goal = on-facts of a random state)."""
+    """Returns pool_state[K,W], pool_goal[K,W] (goal = on-facts of a random state).
+    Rejection-sampled so every goal is non-empty and NOT already satisfied by its start state
+    (otherwise ~2^-(N-1) of problems are trivially done at the first step)."""
     W = ground(N)[0].shape[1]
     rng = np.random.default_rng(seed)
     ps, pg = [], []
     for _ in range(K):
-        ps.append(_random_state(N, rng, W)[0]); pg.append(_random_state(N, rng, W)[1])
+        while True:
+            s = _random_state(N, rng, W)[0]; g = _random_state(N, rng, W)[1]
+            if g.any() and not np.array_equal(s & g, g):
+                break
+        ps.append(s); pg.append(g)
     return np.stack(ps), np.stack(pg)

@@ -12,6 +12,7 @@ import json, os, statistics, time
 import numpy as np
 import jax, warp as wp
 from ground import ground, make_pool
+from common import require_same_gpu
 from env_jax import JaxEnv
 from env_warp import WarpEnv
 
@@ -20,6 +21,7 @@ WARM, RUNS = 3, 10
 HERE = os.path.dirname(os.path.abspath(__file__))
 wp.init()
 cuda = wp.is_cuda_available()
+if os.environ.get("BENCH_CPU_OK") != "1": require_same_gpu()
 dev = "cuda:0" if cuda else "cpu"
 label = "GPU" if cuda else "CPU"
 
