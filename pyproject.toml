@@ -1,6 +1,6 @@
 [project]
 name = "blocksworld-bench"
-version = "0.2.0"
+version = "0.2.1"
 description = "Blocksworld env benchmark: JAX vs NVIDIA Warp"
 requires-python = ">=3.10"
 dependencies = [

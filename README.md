@@ -40,9 +40,11 @@ Standard 4-operator STRIPS Blocksworld (`pickup`, `putdown`, `stack`, `unstack`)
 ## Run
 
 ```bash
-pip install -e .
+pip install -e '.[cuda12,dev]'   # cuda12 extra installs CUDA-enabled JAX; without it JAX is CPU-only
 python bench/blocksworld/bench.py
 ```
+
+The `cuda12` extra is required for GPU runs: the GPU check in `common.require_same_gpu()` rejects a CPU-only JAX. Verified on an NVIDIA L4 (driver 580, CUDA 13 toolkit for Warp). Results: `bench/blocksworld/results/l4_colab/`.
 
 Sweep: N ∈ {4, 8, 16, 32}, E ∈ {1k, 10k, 100k}, T = 100 steps, 3 warmups + 10 timed runs (median and IQR). Without a GPU everything runs on CPU, is labeled as such, and says nothing about GPU performance.
 
