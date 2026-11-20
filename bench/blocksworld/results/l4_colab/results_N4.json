@@ -1,0 +1,274 @@
+{
+ "N": 4,
+ "W": 1,
+ "A": 32,
+ "T": 100,
+ "device": "GPU",
+ "info": {
+  "jax": "0.12.1",
+  "warp": "1.19.0",
+  "jax_devices": [
+   "cuda:0"
+  ],
+  "nvidia_smi": "NVIDIA L4, 580.82.07, 2040 MHz, 23034 MiB",
+  "git": "f06fdfa",
+  "slurm_job": ""
+ },
+ "rows": [
+  {
+   "E": 1000,
+   "jax_naive_compile_s": 0.11809456100036186,
+   "fixed_jax_naive_unfused": {
+    "median": 0.011678181999968729,
+    "iqr": 0.00015640025014818093,
+    "steps_per_s": 8562976.66882292
+   },
+   "fixed_jax_naive_scan": {
+    "median": 0.0018694714999583084,
+    "iqr": 2.5582999910511717e-05,
+    "steps_per_s": 53491053.48876949
+   },
+   "jax_tuned_aos_compile_s": 0.1297965810003916,
+   "fixed_jax_tuned_aos": {
+    "median": 0.0010711305001223081,
+    "iqr": 2.63290000930283e-05,
+    "steps_per_s": 93359305.88157222
+   },
+   "done_rate_fixed": 0.00076,
+   "jax_tuned_soa_compile_s": 0.12060242000006838,
+   "fixed_jax_tuned_soa": {
+    "median": 0.0010722289998739143,
+    "iqr": 1.1279749855930277e-05,
+    "steps_per_s": 93263659.17332885
+   },
+   "fixed_warp_naive_unfused": {
+    "median": 0.0043672250001236534,
+    "iqr": 5.312650000632857e-05,
+    "steps_per_s": 22897835.581443273
+   },
+   "fixed_warp_naive_graph": {
+    "median": 0.00022977800017542904,
+    "iqr": 6.704999577777926e-07,
+    "steps_per_s": 435202673.5529633
+   },
+   "fixed_warp_tuned_aos_unfused": {
+    "median": 0.0041759314999580965,
+    "iqr": 4.0086500348479603e-05,
+    "steps_per_s": 23946752.95823302
+   },
+   "fixed_warp_tuned_aos_graph": {
+    "median": 0.000208391000114716,
+    "iqr": 2.3780003175488673e-06,
+    "steps_per_s": 479867172.5024188
+   },
+   "fixed_warp_tuned_soa_unfused": {
+    "median": 0.004516779499908807,
+    "iqr": 6.71580000926042e-05,
+    "steps_per_s": 22139668.319434006
+   },
+   "fixed_warp_tuned_soa_graph": {
+    "median": 0.00020936550004080345,
+    "iqr": 5.815004442411009e-07,
+    "steps_per_s": 477633611.93945944
+   },
+   "jax_chunk": 1000,
+   "jax_look_aos_compile_s": 0.2221044850002727,
+   "look_jax_tuned_aos": {
+    "median": 0.0016688339999291202,
+    "iqr": 2.827475009326008e-05,
+    "steps_per_s": 59922077.33318429,
+    "children_per_s": 1917506474.6618972
+   },
+   "done_rate_look": 0.0111,
+   "jax_look_soa_compile_s": 0.27636978600003204,
+   "look_jax_tuned_soa": {
+    "median": 0.001625682999701894,
+    "iqr": 2.9605750114569673e-05,
+    "steps_per_s": 61512607.327712275,
+    "children_per_s": 1968403434.4867928
+   },
+   "look_warp_tuned_aos_graph": {
+    "median": 0.0004953464997470292,
+    "iqr": 1.0664997489584493e-06,
+    "steps_per_s": 201878886.9025409,
+    "children_per_s": 6460124380.881309
+   },
+   "look_warp_tuned_soa_graph": {
+    "median": 0.0004919809998682467,
+    "iqr": 1.3162501772967516e-06,
+    "steps_per_s": 203259882.04174584,
+    "children_per_s": 6504316225.335867
+   }
+  },
+  {
+   "E": 10000,
+   "jax_naive_compile_s": 0.11936740400005874,
+   "fixed_jax_naive_unfused": {
+    "median": 0.012021072499919683,
+    "iqr": 0.00011922675014375272,
+    "steps_per_s": 83187253.05139633
+   },
+   "fixed_jax_naive_scan": {
+    "median": 0.000725460999774441,
+    "iqr": 3.586650018405635e-05,
+    "steps_per_s": 1378433851.4557202
+   },
+   "jax_tuned_aos_compile_s": 0.11138093199997456,
+   "fixed_jax_tuned_aos": {
+    "median": 0.0018038160001196957,
+    "iqr": 2.7248249921285606e-05,
+    "steps_per_s": 554380269.3476735
+   },
+   "done_rate_fixed": 0.000737,
+   "jax_tuned_soa_compile_s": 0.11381469399975686,
+   "fixed_jax_tuned_soa": {
+    "median": 0.0017847164999693632,
+    "iqr": 2.7790500098490156e-05,
+    "steps_per_s": 560313080.5464993
+   },
+   "fixed_warp_naive_unfused": {
+    "median": 0.0044261070001994085,
+    "iqr": 4.4520499841382843e-05,
+    "steps_per_s": 225932179.21639654
+   },
+   "fixed_warp_naive_graph": {
+    "median": 0.00023706699971626222,
+    "iqr": 6.304999260464683e-07,
+    "steps_per_s": 4218216796.082405
+   },
+   "fixed_warp_tuned_aos_unfused": {
+    "median": 0.004234288500128969,
+    "iqr": 5.3681249482906424e-05,
+    "steps_per_s": 236167186.05015737
+   },
+   "fixed_warp_tuned_aos_graph": {
+    "median": 0.0002179600000999926,
+    "iqr": 1.2047499922118732e-06,
+    "steps_per_s": 4587997795.65624
+   },
+   "fixed_warp_tuned_soa_unfused": {
+    "median": 0.004212423499893703,
+    "iqr": 5.844025031365163e-05,
+    "steps_per_s": 237393035.15547147
+   },
+   "fixed_warp_tuned_soa_graph": {
+    "median": 0.00021907999985160131,
+    "iqr": 1.915750203806965e-06,
+    "steps_per_s": 4564542635.920085
+   },
+   "jax_chunk": 10000,
+   "jax_look_aos_compile_s": 0.2016579789997195,
+   "look_jax_tuned_aos": {
+    "median": 0.0016396974999679514,
+    "iqr": 4.8911999670053774e-05,
+    "steps_per_s": 609868588.5777988,
+    "children_per_s": 19515794834.489563
+   },
+   "done_rate_look": 0.010886,
+   "jax_look_soa_compile_s": 0.19737755999994988,
+   "look_jax_tuned_soa": {
+    "median": 0.0017233290002423018,
+    "iqr": 8.809274993382132e-05,
+    "steps_per_s": 580272252.0536699,
+    "children_per_s": 18568712065.717438
+   },
+   "look_warp_tuned_aos_graph": {
+    "median": 0.0005156494999027927,
+    "iqr": 8.107502935672528e-07,
+    "steps_per_s": 1939301793.540989,
+    "children_per_s": 62057657393.311646
+   },
+   "look_warp_tuned_soa_graph": {
+    "median": 0.000512901500087537,
+    "iqr": 6.27500071459508e-07,
+    "steps_per_s": 1949692094.5431623,
+    "children_per_s": 62390147025.381195
+   }
+  },
+  {
+   "E": 100000,
+   "jax_naive_compile_s": 0.14547140700005912,
+   "fixed_jax_naive_unfused": {
+    "median": 0.013317492999931346,
+    "iqr": 0.00010051650008335855,
+    "steps_per_s": 750892078.5655042
+   },
+   "fixed_jax_naive_scan": {
+    "median": 0.0017598900001303264,
+    "iqr": 9.796999961508845e-06,
+    "steps_per_s": 5682173317.229749
+   },
+   "jax_tuned_aos_compile_s": 0.13574952499993742,
+   "fixed_jax_tuned_aos": {
+    "median": 0.0016178815001239855,
+    "iqr": 9.839325014127098e-05,
+    "steps_per_s": 6180922397.118488
+   },
+   "done_rate_fixed": 0.0007755,
+   "jax_tuned_soa_compile_s": 0.15689079399999173,
+   "fixed_jax_tuned_soa": {
+    "median": 0.0016240704999290756,
+    "iqr": 5.0787000304808316e-05,
+    "steps_per_s": 6157368168.707397
+   },
+   "fixed_warp_naive_unfused": {
+    "median": 0.004418174999955227,
+    "iqr": 5.807825016290735e-05,
+    "steps_per_s": 2263377978.4868956
+   },
+   "fixed_warp_naive_graph": {
+    "median": 0.00039518600010524096,
+    "iqr": 1.3107500080877799e-06,
+    "steps_per_s": 25304540133.853237
+   },
+   "fixed_warp_tuned_aos_unfused": {
+    "median": 0.004242659999817988,
+    "iqr": 3.531474976625759e-05,
+    "steps_per_s": 2357011874.726941
+   },
+   "fixed_warp_tuned_aos_graph": {
+    "median": 0.000366999000107171,
+    "iqr": 2.6467499765203684e-06,
+    "steps_per_s": 27248030640.627907
+   },
+   "fixed_warp_tuned_soa_unfused": {
+    "median": 0.00417836399992666,
+    "iqr": 0.0001608425001222713,
+    "steps_per_s": 2393281198.137722
+   },
+   "fixed_warp_tuned_soa_graph": {
+    "median": 0.00036304050013313827,
+    "iqr": 1.1667499393297476e-06,
+    "steps_per_s": 27545136138.62004
+   },
+   "jax_chunk": 100000,
+   "jax_look_aos_compile_s": 0.22168001399995774,
+   "look_jax_tuned_aos": {
+    "median": 0.005171623500245914,
+    "iqr": 5.6838749969756464e-05,
+    "steps_per_s": 1933628772.381534,
+    "children_per_s": 61876120716.20909
+   },
+   "done_rate_look": 0.0109926,
+   "jax_look_soa_compile_s": 0.2032099489997563,
+   "look_jax_tuned_soa": {
+    "median": 0.005245982499900492,
+    "iqr": 5.4460749765894434e-05,
+    "steps_per_s": 1906220617.4324226,
+    "children_per_s": 60999059757.837524
+   },
+   "look_warp_tuned_aos_graph": {
+    "median": 0.0028411905000211846,
+    "iqr": 0.00015559324981495593,
+    "steps_per_s": 3519651357.3888965,
+    "children_per_s": 112628843436.44469
+   },
+   "look_warp_tuned_soa_graph": {
+    "median": 0.0026729374999376887,
+    "iqr": 4.239249392412603e-06,
+    "steps_per_s": 3741202328.9856644,
+    "children_per_s": 119718474527.54126
+   }
+  }
+ ]
+}
